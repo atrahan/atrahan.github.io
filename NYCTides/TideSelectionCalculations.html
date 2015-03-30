@@ -1675,6 +1675,16 @@ div#notebook {
   <div tabindex="-1" id="notebook" class="border-box-sizing">
     <div class="container" id="notebook-container">
 
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Tide-Selection">Tide Selection<a class="anchor-link" href="#Tide-Selection">&#182;</a></h1>
+</div>
+</div>
+</div>
+
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
@@ -1732,31 +1742,6 @@ In&nbsp;[3]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span class="c">##-- Function to divide NOAA-style date strings</span>
-<span class="k">def</span> <span class="nf">divide_datetime</span><span class="p">(</span><span class="n">dt</span><span class="p">):</span>
-    <span class="c"># FORMAT:  2011-04-01 00:00</span>
-    <span class="n">date</span> <span class="o">=</span> <span class="n">dt</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">&#39; &#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
-    <span class="n">time</span> <span class="o">=</span> <span class="n">dt</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">&#39; &#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
-    <span class="n">year</span> <span class="o">=</span> <span class="n">date</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">&#39;-&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
-    <span class="n">mo</span> <span class="o">=</span> <span class="n">date</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">&#39;-&#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
-    <span class="n">dy</span> <span class="o">=</span> <span class="n">date</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">&#39;-&#39;</span><span class="p">)[</span><span class="mi">2</span><span class="p">]</span>
-    <span class="n">hr</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">&#39;:&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
-    <span class="n">mn</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">&#39;:&#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
-    <span class="k">return</span> <span class="p">[</span><span class="n">year</span><span class="p">,</span> <span class="n">mo</span><span class="p">,</span> <span class="n">dy</span><span class="p">,</span> <span class="n">hr</span><span class="p">,</span> <span class="n">mn</span><span class="p">]</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[4]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
 <div class="highlight"><pre><span class="c">##-- Define I/O Directories</span>
 <span class="n">dirin</span> <span class="o">=</span> <span class="s">r&#39;C:\Users\atrahan\Documents\Projects\NYC_FEMA_Appeal\preprocess\TideSelection&#39;</span>
 <span class="n">dirout</span> <span class="o">=</span> <span class="n">dirin</span> <span class="o">+</span> <span class="s">r&#39;\output&#39;</span>
@@ -1772,7 +1757,7 @@ In&nbsp;[4]:
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[5]:
+In&nbsp;[4]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -1791,7 +1776,7 @@ In&nbsp;[5]:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Tide-Data">Tide Data<a class="anchor-link" href="#Tide-Data">&#182;</a></h1>
+<h2 id="Import-Tide-Data">Import Tide Data<a class="anchor-link" href="#Import-Tide-Data">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -1799,7 +1784,7 @@ In&nbsp;[5]:
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[6]:
+In&nbsp;[5]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -1824,12 +1809,12 @@ In&nbsp;[6]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[6]:</div>
+    Out[5]:</div>
 
 
 <div class="output_text output_subarea output_pyout">
 <pre>
-&lt;matplotlib.text.Text at 0x9c2a570&gt;
+&lt;matplotlib.text.Text at 0x9930530&gt;
 </pre>
 </div>
 
@@ -3495,10 +3480,20 @@ RU5ErkJggg==
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="(1)-Lag-Analysis">(1) Lag Analysis<a class="anchor-link" href="#(1)-Lag-Analysis">&#182;</a></h3>
+</div>
+</div>
+</div>
+
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[7]:
+In&nbsp;[6]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -3517,12 +3512,12 @@ In&nbsp;[7]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[7]:</div>
+    Out[6]:</div>
 
 
 <div class="output_text output_subarea output_pyout">
 <pre>
-&lt;matplotlib.text.Text at 0x109f5830&gt;
+&lt;matplotlib.text.Text at 0x9a087d0&gt;
 </pre>
 </div>
 
@@ -3773,10 +3768,20 @@ iEgFUvAXEalACv4iIhXo/wP/J7JbKpUd1AAAAABJRU5ErkJggg==
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="(2)-Probability-Density-Function">(2) Probability Density Function<a class="anchor-link" href="#(2)-Probability-Density-Function">&#182;</a></h3>
+</div>
+</div>
+</div>
+
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[8]:
+In&nbsp;[7]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -3795,12 +3800,12 @@ In&nbsp;[8]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[8]:</div>
+    Out[7]:</div>
 
 
 <div class="output_text output_subarea output_pyout">
 <pre>
-&lt;matplotlib.text.Text at 0x109e9ff0&gt;
+&lt;matplotlib.text.Text at 0x99fc850&gt;
 </pre>
 </div>
 
@@ -4070,7 +4075,7 @@ xcEYY0w9VhyMMcbU8/8YWzQr9gDuZwAAAABJRU5ErkJggg==
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Finding-High-and-Low-Tides">Finding High and Low Tides<a class="anchor-link" href="#Finding-High-and-Low-Tides">&#182;</a></h1>
+<h2 id="Identify-High-and-Low-Tides">Identify High and Low Tides<a class="anchor-link" href="#Identify-High-and-Low-Tides">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -4078,7 +4083,7 @@ xcEYY0w9VhyMMcbU8/8YWzQr9gDuZwAAAABJRU5ErkJggg==
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[9]:
+In&nbsp;[8]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -4109,12 +4114,12 @@ In&nbsp;[9]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[9]:</div>
+    Out[8]:</div>
 
 
 <div class="output_text output_subarea output_pyout">
 <pre>
-&lt;matplotlib.axes._subplots.AxesSubplot at 0x10e49bb0&gt;
+&lt;matplotlib.axes._subplots.AxesSubplot at 0x10d75f70&gt;
 </pre>
 </div>
 
@@ -6307,7 +6312,7 @@ o1MAAAAASUVORK5CYII=
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Dividing-HHW/HW-and-LLW/LW">Dividing HHW/HW and LLW/LW<a class="anchor-link" href="#Dividing-HHW/HW-and-LLW/LW">&#182;</a></h1>
+<h2 id="Divide-HHW/HW-and-LLW/LW">Divide HHW/HW and LLW/LW<a class="anchor-link" href="#Divide-HHW/HW-and-LLW/LW">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -6315,7 +6320,7 @@ o1MAAAAASUVORK5CYII=
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[10]:
+In&nbsp;[9]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -6371,12 +6376,12 @@ In&nbsp;[10]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[10]:</div>
+    Out[9]:</div>
 
 
 <div class="output_text output_subarea output_pyout">
 <pre>
-&lt;matplotlib.axes._subplots.AxesSubplot at 0x10e36f90&gt;
+&lt;matplotlib.axes._subplots.AxesSubplot at 0x10f77f50&gt;
 </pre>
 </div>
 
@@ -8744,7 +8749,7 @@ RCSK/D/EK5HT6ASSPgAAAABJRU5ErkJggg==
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[11]:
+In&nbsp;[10]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -8784,7 +8789,7 @@ MLLW:	-2.39
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Dividing-Spring-and-Neap-Tides">Dividing Spring and Neap Tides<a class="anchor-link" href="#Dividing-Spring-and-Neap-Tides">&#182;</a></h1>
+<h2 id="Divide-Spring-and-Neap-Tides">Divide Spring and Neap Tides<a class="anchor-link" href="#Divide-Spring-and-Neap-Tides">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -8802,7 +8807,7 @@ MLLW:	-2.39
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[13]:
+In&nbsp;[11]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -10597,7 +10602,7 @@ HWKxR5IkSZIkqUP+H275fICfa+iSAAAAAElFTkSuQmCC
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[14]:
+In&nbsp;[12]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -12348,10 +12353,29 @@ EIs9kiRJkiRJHWKxR5IkSZIkqUMs9kiSJEmSJHWIxR5JkiRJkqQOsdgjSZIkSZLUIf8HU+Z5R8R3
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="(3)-Four-Selected-Tides">(3) Four Selected Tides<a class="anchor-link" href="#(3)-Four-Selected-Tides">&#182;</a></h3>
+</div>
+</div>
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><i>Based on Method (1) above</i></p>
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[15]:
+In&nbsp;[13]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -12380,12 +12404,12 @@ In&nbsp;[15]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[15]:</div>
+    Out[13]:</div>
 
 
 <div class="output_text output_subarea output_pyout">
 <pre>
-&lt;matplotlib.axes._subplots.AxesSubplot at 0x1145d050&gt;
+&lt;matplotlib.axes._subplots.AxesSubplot at 0x1152b070&gt;
 </pre>
 </div>
 
@@ -14013,7 +14037,7 @@ AAAATIiwBwAAAGBChD0AAAAAEyLsAQAAAJgQYQ8AAADAhPwF+cYsG905h7sAAAAASUVORK5CYII=
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[]:
+In&nbsp;[14]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -14037,11 +14061,30 @@ In&nbsp;[]:
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[14]:</div>
+
+
+<div class="output_text output_subarea output_pyout">
+<pre>
+&quot;\nh = pyplot.figure(figsize=(20, 6), dpi=120)\ndata[&apos;2010-10-9 06&apos;:&apos;2010-10-9 09&apos;].plot(color=&apos;blue&apos;, marker=&apos;.&apos;)\nd2 = data[&apos;2010-10-13 10&apos;:&apos;2010-10-13 15&apos;]\namn = (argmin(d2.values))\nprint(amn)\n\nprint(d2[amn-4:amn+5])\n\nlw[&apos;2010-10-9 06&apos;:&apos;2010-10-9 09&apos;].plot(color=&apos;red&apos;, marker=&apos;.&apos;)\nllw[&apos;2010-10-9 06&apos;:&apos;2010-10-9 09&apos;].plot(color=&apos;green&apos;, marker=&apos;.&apos;)\n&quot;
+</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[]:
+In&nbsp;[15]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -14049,6 +14092,25 @@ In&nbsp;[]:
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[15]:</div>
+
+
+<div class="output_text output_subarea output_pyout">
+<pre>
+u&apos;C:\\WINDOWS\\system32&apos;
+</pre>
+</div>
+
+</div>
+
 </div>
 </div>
 
